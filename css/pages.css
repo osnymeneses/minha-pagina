@@ -1,0 +1,97 @@
+.background-pages {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.pages h2 {
+    max-width: 160px;
+    margin: 60px 30px;
+    color: #8c8c8c;
+    font-size: 2em;
+}
+
+.pages p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #8c8c8c;
+    padding-bottom: 20px;
+}
+
+.container-pages {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.container-pages ul {
+    margin-bottom: 30px;
+}
+
+.container-pages ul li {
+    margin-bottom: 5px;
+    list-style: none;
+}
+
+.container-pages dl {
+    width: 100%;
+}
+
+.container-pages dl > div {
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.container-pages dl  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1rem;
+    background-color: rgb(175, 175, 175);
+}
+
+.container-pages dl  button:hover {
+    color: rgb(76, 75, 75);
+}
+
+.container-pages i {
+    padding-right: 5px
+}
+
+.container-pages dd {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 0 0 5px 5px;
+    background-color: #d1d1d1;
+}
+
+.js-accordion dd {
+    display: none;
+}
+
+.js-accordion dd.ativo {
+    display: block;
+    animation: slideDown .5s forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 420px) {
+
+    .container-pages dl  button {
+        text-align: center;
+    }
+
+    .container-pages i {
+        display: none;
+    }
+
+}

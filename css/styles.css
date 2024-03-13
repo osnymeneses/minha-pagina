@@ -1,0 +1,277 @@
+@import url("pages.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+/*Header*/
+
+.background-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 100vh;
+    background-color: #000;
+}
+
+.header-container {
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #000;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 140px;
+    height: 50px;
+    overflow: hidden;
+    color: #ffc340;
+    font-size: 1.7em;
+}
+
+.header-menu {
+    display: flex;
+    gap: 50px;
+}
+
+
+
+.header-menu li {
+    list-style: none;
+}
+
+.header-menu li a {
+    color: #8c8c8c;
+    display: block;
+    padding: .5rem;
+    text-decoration: none;
+}
+
+.header-menu a::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    margin-top: 4px;
+    transition: 0.3s;
+    background-color: #8c8c8c;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+#btn-mobile{
+    display: none;
+}
+
+/*Header*/
+
+
+/*Profile Data*/
+main {
+    position: relative;
+}
+
+.container-main {
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    padding: 30px 0;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: #fff;
+}
+
+.dados-perfil {
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/foto-perfil.jpg);
+    background-size: cover;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+
+.title h1{
+    font-size: 1.7rem;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+.title h3 {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.icons a {
+    text-decoration: none;
+}
+
+.icons img {
+    margin: 0 15px;
+    width: 36px;
+    height: 36px;
+}
+
+/*Profile Data*/
+
+
+
+/*Responsivo*/
+
+@media (max-width: 750px) {
+    .header-container {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .pages {
+        padding: 0 10px;
+    }
+
+    .header-menu a::after {
+        display: none;
+    }
+    
+    a:hover::after {
+        display: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .header-menu {
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .header-menu a::after {
+        display: none;
+    }
+    
+    a:hover::after {
+        display: none;
+    }
+}
+
+@media (max-width: 420px) {
+    .background-container {
+        padding: 10px;
+    }
+
+    .header-container {
+        gap: 20px;
+        flex-direction: row;
+    }
+
+    .header-menu a::after {
+        display: none;
+    }
+    
+    a:hover::after {
+        display: none;
+    }
+
+    .header-menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0;
+        z-index: 3;
+        text-align: center;
+        height: 0;
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .header-menu a {
+        padding: 1rem 0;
+        margin:  0 1rem;
+        border-bottom: 1px solid #8c8c8c;
+    }
+
+    ul {
+        width: 100%;
+        position: relative;
+    }
+
+    nav.active .header-menu {
+        display: block;
+        visibility: visible;
+        height: auto;
+    }
+
+    #btn-mobile{
+        display: flex;
+        font-size: 1rem;
+        border: none;
+        color: #fff;
+        background: none;
+        padding: .5rem 1rem;
+        cursor: pointer;
+        gap: .5rem;
+    }
+
+    #hamburguer {
+        width: 20px;
+        border-top: 2px solid ;
+    }
+
+    #hamburguer::after, #hamburguer::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+        background-color: currentColor;
+    }
+
+    nav.active #hamburguer {
+        border-top-color: transparent;
+    }
+
+    nav.active #hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    nav.active #hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    .container-main {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 300px) {
+    .header-container {
+        padding: 10px;
+    }
+
+    .header-menu a::after {
+        display: none;
+    }
+    
+    a:hover::after {
+        display: none;
+    }
+}
